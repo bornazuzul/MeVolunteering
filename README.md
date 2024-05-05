@@ -1,6 +1,6 @@
 ## MeVoluneering
 
-Welcome to Volunteer Connect! This application is your gateway to meaningful volunteering experiences, offering a platform for both volunteers and administrators to seamlessly engage in community service.
+Welcome to MeVoluneering! This application is your gateway to meaningful volunteering experiences, offering a platform for both volunteers and administrators to seamlessly engage in community service.
 
 ## Table of Contents
 - [Overview](#overview)
@@ -10,7 +10,7 @@ Welcome to Volunteer Connect! This application is your gateway to meaningful vol
 - [Acknowledgments](#acknowledgments)
 
 ## Overview
-Volunteer Connect is a React-based application designed to streamline the process of volunteering. Whether you're an individual looking to contribute your time or an organization seeking assistance, Volunteer Connect has you covered. With its intuitive interface and robust features, managing and participating in volunteering activities has never been easier.
+MeVolunteering is a React-based application designed to streamline the process of volunteering. Whether you're an individual looking to contribute your time or an organization seeking assistance, MeVolunteering has you covered. With its intuitive interface and robust features, managing and participating in volunteering activities has never been easier.
 This was a 3 week long project built at the end of EDIT Junior React JS. Project goals included using technologies learned up until this point and familiarizing myself with documentation for new features.  
 At the end of the day, the technologies implemented in this project are React, React-Router 4.0, D3, and a significant amount of VanillaJS, JSX, and CSS. I chose to use the `create-react-app`
 
