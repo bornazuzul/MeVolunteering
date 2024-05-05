@@ -1,0 +1,27 @@
+.new-Organization-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+.Organization-form  {
+    text-align: center;
+}
+
+
+.Organization-form p {
+    font-weight: 600;
+    color: #D23D2D;
+    text-align: center;
+    width: 100%;
+}
+
+.Organization-form__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}

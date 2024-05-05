@@ -1,0 +1,218 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: hsl(164, 34%, 87%);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #b4b4b46f;
+}
+
+.container nav {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.container nav ul {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 100%;
+}
+
+.nav li a {
+    font-weight: 620;
+    font-size: 1.25rem;
+    color: #181823;
+    text-decoration: none;
+    transition: ease-in-out 0.1s;
+    margin-inline: 2rem;
+}
+
+.nav li a:hover {
+    color: hsl(185, 66%, 30%);
+}
+
+.active {
+    color: hsl(185, 66%, 30%) !important;
+    border-bottom: 3px solid hsl(185, 66%, 30%);
+}
+
+.admin-switch {
+    display: flex;
+    align-items: center;
+    margin-inline: 1.5rem;
+}
+
+.admin-switch p {
+    font-weight: 620;
+    font-size: 1.25rem;
+}
+
+/* swich v1 */
+.toggle-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.toggle-slot {
+  font-size: 10px;
+  position: relative;
+  height: 3.5em;
+  width: 7em;
+  border: 0px solid transparent;
+  border-radius: 10em;
+  background-color: white;
+  transition: background-color 250ms;
+}
+
+.toggle-checkbox:checked ~ .toggle-slot {
+  background-color: #374151;
+}
+
+.toggle-button {
+  transform: translate(0.3em, 0.25em);
+  position: absolute;
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  background-color: #ffeccf;
+  box-shadow: inset 0px 0px 0px 0.75em #ffbb52;
+  transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+}
+
+.toggle-checkbox:checked ~ .toggle-slot .toggle-button {
+  background-color: #485367;
+  box-shadow: inset 0px 0px 0px 0.75em white;
+  transform: translate(3.65em, 0.25em);
+}
+
+.sun-icon {
+  position: absolute;
+  height: 6em;
+  width: 6em;
+  color: #ffbb52;
+}
+
+.sun-icon-wrapper {
+  position: absolute;
+  height: 6em;
+  width: 6em;
+  opacity: 1;
+  transform: translate(2em, 2em) rotate(15deg);
+  transform-origin: 50% 50%;
+  transition: opacity 150ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+}
+
+.toggle-checkbox:checked ~ .toggle-slot .sun-icon-wrapper {
+  opacity: 0;
+  transform: translate(3em, 2em) rotate(0deg);
+}
+
+.moon-icon {
+  position: absolute;
+  height: 6em;
+  width: 6em;
+  color: white;
+}
+
+.moon-icon-wrapper {
+  position: absolute;
+  height: 6em;
+  width: 6em;
+  opacity: 0;
+  transform: translate(11em, 2em) rotate(0deg);
+  transform-origin: 50% 50%;
+  transition: opacity 150ms, transform 500ms cubic-bezier(.26,2.5,.46,.71);
+}
+
+.toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper {
+  opacity: 1;
+  transform: translate(2em, 2em) rotate(-15deg);
+}
+
+
+
+/* swich v2 */
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.2em;
+  height: 1.2em;
+  margin-left: 1rem;
+}
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #ebb30b;
+  transition: 0.4s ease-out;
+  border-radius: 1rem 0rem 1rem;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.2em;
+  width: 1em;
+  left: 0em;
+  bottom: 0em;
+  background-color: #d48b00;
+  transition: 0.4s ease-out;
+  border-radius: 1rem 0rem 1rem;
+  border: 3px solid #ba7a03;
+}
+
+.ch:checked + .slider {
+  background-color: #86b049;
+}
+
+.ch:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+.ch:checked + .slider:before {
+  transform: translateX(2.2em);
+  background-color: #476930;
+  box-shadow: 0px 0px 40px 5px #86b049;
+  border: 3px solid white;
+}
+
+.ch:checked + .slider::after {
+  content: "|";
+  color: white;
+  position: absolute;
+  right: 0.2rem;
+  top: -5.2px;
+  transform: rotate(45deg);
+  transition: opacity 0.5s ease 0.5s;
+}
