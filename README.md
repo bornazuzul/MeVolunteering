@@ -6,9 +6,8 @@ Welcome to Volunteer Connect! This application is your gateway to meaningful vol
 - [Overview](#overview)
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
 - [License](#license)
+- [Acknowledgments](#acknowledgments)
 
 ## Overview
 Volunteer Connect is a React-based application designed to streamline the process of volunteering. Whether you're an individual looking to contribute your time or an organization seeking assistance, Volunteer Connect has you covered. With its intuitive interface and robust features, managing and participating in volunteering activities has never been easier.
