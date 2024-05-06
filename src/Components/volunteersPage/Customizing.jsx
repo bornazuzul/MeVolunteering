@@ -6,21 +6,20 @@ import RadioInput from "../UI/RadioInput";
 import { useState } from "react";
 import TextField from "@mui/material/TextField";
 import DateInput from "../UI/DateInput";
-import { types, status } from "../../store/animalProperties";
+import { types, status } from "../../store/Properties";
 import Button from "../UI/Button";
 import ImageInput from "../UI/ImageInput";
 
 function Customizing(props) {
-  const [name, setName] = useState(props.animal.name);
-  const [description, setDescription] = useState(props.animal.description);
-  // const [age, setAge] = useState(props.animal.age);
-  const [type, setType] = useState(props.animal.type);
+  const [name, setName] = useState(props.volunteer.name);
+  const [description, setDescription] = useState(props.volunteer.description);
+  const [type, setType] = useState(props.volunteer.type);
   const [appointmentDate, setAppointmentDate] = useState(
-    props.animal.appointment
+    props.volunteer.appointment
   );
-  const [applied, setApplied] = useState(props.animal.adopted);
-  const [imageLink, setImageLink] = useState(props.animal.image);
-  const [displayImageLink, setDisplayImageLink] = useState(props.animal.image);
+  const [applied, setApplied] = useState(props.volunteer.adopted);
+  const [imageLink, setImageLink] = useState(props.volunteer.image);
+  const [displayImageLink, setDisplayImageLink] = useState(props.volunteer.image);
 
   const saveChangesHandler = () => {
     if (name === "" || type === "" || imageLink === "") {
@@ -34,12 +33,6 @@ function Customizing(props) {
     }
     appBool = applied === "true" ? true : false;
 
-    // let chipBolean;
-    // if (typeof chip === "boolean") {
-    //   chipBolean = chip;
-    // }
-    // chipBolean = chip === "true" ? true : false;
-
     let appointment;
 
     if (typeof appointmentDate == "string") {
@@ -52,10 +45,9 @@ function Customizing(props) {
     }
 
     props.saveChanges({
-      id: props.animal.id,
+      id: props.volunteer.id,
       name: name,
       description: description,
-      // age: age,
       type: type,
       appointment: appointment,
       image: imageLink,
@@ -63,7 +55,7 @@ function Customizing(props) {
   };
 
   return (
-    <Modal closeCustomize={props.close} animal={props.animal}>
+    <Modal closeCustomize={props.close} activity={props.volunteer}>
       <div className={classes.activity}>
         <div className={classes.center}>
           <ImageInput

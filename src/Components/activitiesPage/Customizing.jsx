@@ -6,7 +6,7 @@ import RadioInput from "../UI/RadioInput";
 import { useState } from "react";
 import TextField from "@mui/material/TextField";
 import DateInput from "../UI/DateInput";
-import { types, status } from "../../store/animalProperties";
+import { types, status } from "../../store/Properties";
 import Button from "../UI/Button";
 import ImageInput from "../UI/ImageInput";
 
@@ -64,7 +64,7 @@ function Customizing(props) {
   };
 
   return (
-    <Modal closeCustomize={props.close} animal={props.animal}>
+    <Modal closeCustomize={props.close} activity={props.activity}>
       <div className={classes.activity}>
         <div className={classes.center}>
           <ImageInput

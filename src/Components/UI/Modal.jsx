@@ -13,10 +13,10 @@ const Backdrop = (props) => {
 
 const ModalOverlay = (props) => {
   let modalClass;
-  if (!props.animal) {
+  if (!props.activity) {
     modalClass = style.modal + " " + style.white;
   } else {
-    modalClass = props.animal.adopted
+    modalClass = props.activity.adopted
       ? style.modal + " " + style.adopted
       : style.modal + " " + style["not-adopted"];
   }
@@ -36,7 +36,7 @@ function Modal(props) {
         document.getElementById("backdrop")
       )}
       {ReactDOM.createPortal(
-        <ModalOverlay animal={props.animal}>{props.children}</ModalOverlay>,
+        <ModalOverlay activity={props.activity}>{props.children}</ModalOverlay>,
         document.getElementById("backdrop")
       )}
     </>

@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./FilterOptions.module.css";
 import RadioInput from "../UI/RadioInput";
-import { types, status } from "../../store/animalProperties";
+import { types, status } from "../../store/Properties";
 
 const allTypes = [{ label: "All", value: "all" }, ...types];
 const allStatus = [{ label: "All", value: "all" }, ...status];

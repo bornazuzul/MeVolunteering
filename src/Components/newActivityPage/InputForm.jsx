@@ -7,7 +7,7 @@ import TextField from "@mui/material/TextField";
 import dayjs from "dayjs";
 import DateInput from "../UI/DateInput";
 import ImageInput from "../UI/ImageInput";
-import { types } from "../../store/animalProperties";
+import { types } from "../../store/Properties";
 import Button from "../UI/Button";
 
 const newTypes = [{ label: "Pick category", value: "odaberi-vrstu" }, ...types];

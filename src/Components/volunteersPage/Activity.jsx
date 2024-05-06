@@ -10,7 +10,7 @@ function Activity(props) {
   const [customizing, setCustomizing] = useState(false);
 
   const applied = props.activity.applied ? "Applied" : "Not applied";
-  const animalClass = props.activity.applied
+  const actClass = props.activity.applied
     ? classes.activity + " " + classes.applied
     : classes.activity + " " + classes["not-applied"];
 
@@ -37,10 +37,10 @@ function Activity(props) {
         <Customizing
           saveChanges={saveChangesHandler}
           close={openCloseCustomize}
-          animal={props.activity}
+          volunteer={props.activity}
         />
       )}
-      <div className={animalClass}>
+      <div className={actClass}>
         <img src={props.activity.image} />
         <div className={classes.info}>
           <div className={classes["name-description"]}>
